@@ -1,0 +1,83 @@
+@import "./../../node_modules/bootstrap/scss/bootstrap.scss";
+// C:\Users\achic\myDesktop\RUBY\ocr_p7_bis\node_modules\bootstrap\scss\bootstrap.scss
+@import "./BEM/main.scss";
+/***********************************/
+/***********************************/
+/***********************************/
+/************base*******************/
+
+/***********************************/
+/***********************************/
+/************component**************/
+
+/***********************************/
+/***********************************/
+/************layouts****************/
+
+/***********************************/
+/***********************************/
+/************pages******************/
+
+/***********************************/
+/***********************************/
+/************themes*****************/
+
+/***********************************/
+/***********************************/
+/************utils******************/
+
+/***********************************/
+/***********************************/
+/************vendors****************/
+
+/***********************************/
+/***********************************/
+
+
+
+.abFull{position:absolute;top:0;left:0;bottom:0;right:0;}
+.margCenter{margin:0 auto;}
+
+/*********************************************************************************************************************************************************************/
+/*********************************************************************************************************************************************************************/
+body{
+  &>div{
+    &:before{
+      content:"";
+      position:absolute;bottom:0;left:0;width:700px;height:500px;
+      background: url(./imgs/bikers/biker_3.jpg) bottom right no-repeat;
+      z-index: -1;;transform: scaleX(-1);
+    }
+    &:after{
+      content:"";
+      position:absolute;bottom:0;right:0;width:700px;height:500px;
+      background: url(./imgs/bikers/biker_3.jpg) bottom right no-repeat;
+      z-index: -1;
+    }
+    &>header{
+      border-bottom:solid;
+    }
+    &>nav{
+
+    }
+    &>main{
+      background:url(./imgs/bikers/biker_2.jpg) center center no-repeat;
+    }
+    &>footer{
+      border-top:solid;
+    }
+  }
+  /*********************************************************************************************************************************************************************/
+  &.menu_,.menu_home{
+    main{
+      .card-text>b{font-size:2em;color:brown;}
+      .list-group a{transition: background .7s,color .4s;svg{font-size:3em;}}
+      .list-group a:hover{@extend .bg-primary;@extend .text-light;}
+      .jumbotron{position:relative;margin:0 auto;transition:box-shadow .4s;&:hover{box-shadow: 0 0 5em 1em black;&::before{opacity:.5;}}}
+      .jumbotron:before{@extend .abFull;transition:opacity .4s;content:"";background:url("./imgs/bikers/biker_4.jpg") center center, no-repeat;opacity:.1;}
+      .decounter{opacity:.9}
+    }
+  }
+}
+/*********************************************************************************************************************************************************************/
+/*********************************************************************************************************************************************************************/
