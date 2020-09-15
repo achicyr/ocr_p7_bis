@@ -5,7 +5,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Flickr from "./components/vendor/flickr"
-import Gallery from './Gallery.js'
+import {Gallery} from './Gallery.js'
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(

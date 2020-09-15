@@ -1,7 +1,9 @@
 import React from 'react'
-import Decounter from './Decounter'
 
 export default class Jumbotron extends React.Component{
+  constructor(props){
+    super(props)
+  }
   render(){
     return(
       <nav className="jumbotron text-center border border-dark w-75">
@@ -13,7 +15,7 @@ export default class Jumbotron extends React.Component{
             <a href="twitter.com/" target="_blank" className="list-group-item list-group-item-action flex-column align-items-start"><span className="iconify" data-icon="openmoji:twitter" data-inline="false"></span> Twitter</a>
         </div>
         <hr className="my-4"/>
-        <Decounter data="test"/>
+        {this.props.data}
       </nav>
     )
   }

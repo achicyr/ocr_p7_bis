@@ -1,5 +1,12 @@
-export default function dateDiff(date1, date2 = new Date()){
-    var diff = {}                           // Initialisation du retour
+export default function dateDiff(date1, date2 = date1){             // if given, date2 must be higher than date1
+    if(date2 === date1)date1 = new Date()
+    if(date1.getFullYear() < date2.getFullYear())
+        var diff = {month: (12 - (date1.getMonth()+1)) + 4}         // The Tour occur in 2021, so we're still in the previous year we calculate like this: (12 - (date1.getMonth+1))
+    else var diff = {month: (date2.getMonth() - date1.getMonth())}  // otherwise if we're in 2021(the same year), we calculate like this: (date2.getMonth()-date1.getMonth())
+    if(date1.getDate() > date2.getDate())                           // if current th day if higher than Tour's th day, we have to minus diff.month
+        diff.month--
+    date1.setMonth(date1.getMonth() + diff.month)                   // we egalize dates without counting further months, but just days now that we have months different
+
     var tmp = date2 - date1;
 
     tmp = Math.floor(tmp/1000);             // Nombre de secondes entre les 2 dates
