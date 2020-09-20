@@ -18,7 +18,7 @@ function HomeBasicInfos(){
 export default class Home extends React.Component{
   render(){
     return (
-        <Jumbotron data={[<Decounter />,<hr />, <HomeBasicInfos />]} />
+        <Jumbotron data={[<Decounter key={1} />,<hr key={2} />, <HomeBasicInfos key={3} />]} />
     )
   }
 }

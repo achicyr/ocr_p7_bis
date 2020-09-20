@@ -3,8 +3,8 @@ import React from 'react'
 export default class Breadcrumb extends React.Component {
   render () {
     return(
-      <nav className="container">
-        <ol className="breadcrumb" style={{marginBottom: "5px"}}>
+      <>
+        <ol className="safe container breadcrumb">
           <li><a href="#">Home</a></li>&nbsp;>&nbsp;
           <li><a href="#">Library</a></li>&nbsp;>&nbsp;
           <li className="active">Data</li>
@@ -16,7 +16,7 @@ export default class Breadcrumb extends React.Component {
             <span className="breadcrumb-item active">Data</span>
         </nav>
         */}
-      </nav>
+      </>
     )
   }
 }

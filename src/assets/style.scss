@@ -40,9 +40,17 @@
 
 /*********************************************************************************************************************************************************************/
 /*********************************************************************************************************************************************************************/
+ul.safe,ol.safe{margin:0;}
+/*********************************************************************************************************************************************************************/
+/*********************************************************************************************************************************************************************/
 body{
-  background: center / cover no-repeat  url("./imgs/fond1.jpg");
+  height: 100%;width: 100%;position: absolute;
   &>div{
+    position: absolute;
+    top: 0;left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 4rem 0;
     /*
     &:before{
       content:"";
@@ -57,28 +65,42 @@ body{
       z-index: -1;
     }
     */
-    &>header{
+    &>*{position:fixed;}
+    &>header{    
+      z-index: 100;
+      top: 0;
+      height:4rem;
       border-bottom:solid;
       nav.navbar{
         z-index: 100;position:fixed;width:100%;border-bottom:1px solid;box-shadow:0 0 10px 1px;
       }
     }
     &>nav{
-      padding-top:5em;
+      z-index: 90;
+      top: 4rem;
+      left:2em;right:2em;
+      &>.breadcrumb{display:flex;justify-content:center;border:1px solid;border-top:0;}
     }
     &>main{
-      &:not(#pound){padding-bottom:5em !important;}
+      // &:not(#pound){padding:4rem 0 !important;}
+      top:4rem;bottom:4rem;
+      left:0;right:0;
+      background: center / cover no-repeat  url("./imgs/fond1.jpg");
+      >*{margin: 0 auto;position:relative;
+        top:4rem;
+        height:calc(100% - 4rem);
+      }
       //background:url(./imgs/bikers/biker_2.jpg) center center no-repeat;
     }
     &>footer{
-      position:fixed;
       bottom:0;
+      height: 4rem;
       background: silver;
       border-top:solid;
     }
   }
   /*********************************************************************************************************************************************************************/
-  &.menu_,.menu_home{
+  &.menu_,&.menu_home{
     main{
       .card-text>b{font-size:2em;color:brown;}
       .list-group a{transition: background .7s,color .4s;svg{font-size:3em;}}
@@ -88,6 +110,18 @@ body{
       .decounter{opacity:.9}
       section{background: white;font-weight: bold;}
 
+    }
+  }
+  &.menu_gallery{
+    main{
+      background:white;
+      #galleryCarousel{
+        .carousel-item>img{
+          border-radius: 1em !important;
+        }
+        .carousel-indicators{background:rgba(0,0,0,.5)}
+        .carousel-control-icons{color:red;font-weight:bold;font-size:2em;}
+      }
     }
   }
 }

@@ -1,3 +1,4 @@
+import { map } from 'jquery'
 import React from 'react'
 
 export default class Jumbotron extends React.Component{
@@ -15,7 +16,11 @@ export default class Jumbotron extends React.Component{
             <a href="twitter.com/" target="_blank" className="list-group-item list-group-item-action flex-column align-items-start"><span className="iconify" data-icon="openmoji:twitter" data-inline="false"></span> Twitter</a>
         </div>
         <hr className="my-4"/>
-        {this.props.data}
+        {
+          this.props.data.map((component) => {
+            
+          })
+        }
       </nav>
     )
   }

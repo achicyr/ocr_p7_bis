@@ -20,8 +20,8 @@ export default class App extends React.Component{
         <nav>
           <Breadcrumb />
         </nav>
-        <hr className="my-4"/>
-        <main className="container p-5">
+        {/* <hr className="my-4"/> */}
+        <main>
           <Switch>
             <Route path="/contest">
               <Contest />
