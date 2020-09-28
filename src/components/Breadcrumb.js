@@ -2,12 +2,16 @@ import React from 'react'
 
 export default class Breadcrumb extends React.Component {
   render () {
+    let path = document.location.pathname.replace('/','')
     return(
       <>
         <ol className="safe container breadcrumb">
-          <li><a href="#">Home</a></li>&nbsp;>&nbsp;
-          <li><a href="#">Library</a></li>&nbsp;>&nbsp;
-          <li className="active">Data</li>
+          <li><a href="#" class='{path == "" ? active; : ""}'>Home</a></li>&nbsp;>&nbsp;
+          { path != "" ? 
+            <li>{path.charAt(0).toUpperCase() + path.slice(1)}</li>
+            :
+            <></>
+          }
         </ol>
         {/*
         <nav className="breadcrumb">

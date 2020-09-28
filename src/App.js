@@ -10,6 +10,8 @@ import Footer from './Footer_'
 import Home from './Home'
 import Contest from './Contest'
 import Gallery from './Gallery'
+import Rider from './Rider.js'
+import Geo from './Geo.js'
 import Breadcrumb from './components/Breadcrumb';
 
 export default class App extends React.Component{
@@ -28,6 +30,12 @@ export default class App extends React.Component{
             </Route>
             <Route path="/gallery">
               <Gallery />
+            </Route>
+            <Route path="/rider">
+              <Rider />
+            </Route>
+            <Route path="/geo">
+              <Geo />
             </Route>
             <Route path="/">
               <Home />

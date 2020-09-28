@@ -7,7 +7,7 @@ export default class Jumbotron extends React.Component{
   }
   render(){
     return(
-      <nav className="jumbotron text-center border border-dark w-75">
+      <section className="jumbotron text-center border border-dark w-75">
         <h1 className="display-4">Welcome to the Boulder Bike Tour !</h1>
         <p className="lead">Follow us on social networks:</p>
         <div className="list-group flex-row justify-content-center">
@@ -18,10 +18,10 @@ export default class Jumbotron extends React.Component{
         <hr className="my-4"/>
         {
           this.props.data.map((component) => {
-            
+            return component
           })
         }
-      </nav>
+      </section>
     )
   }
 }
