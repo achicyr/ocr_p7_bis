@@ -83,6 +83,7 @@ body{
       top: 4rem;
       left:2em;right:2em;
       &>.breadcrumb{display:flex;justify-content:center;border:1px solid;border-top:0;}
+      .breadcrumb .active{}
     }
     &>main{
       // &:not(#pound){padding:4rem 0 !important;}

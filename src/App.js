@@ -13,6 +13,7 @@ import Gallery from './Gallery'
 import Rider from './Rider.js'
 import Geo from './Geo.js'
 import Breadcrumb from './components/Breadcrumb';
+import ridersJSON from "./components/vendor/riders.json";
 
 export default class App extends React.Component{
   render(){
@@ -28,10 +29,10 @@ export default class App extends React.Component{
             <Route path="/contest">
               <Contest />
             </Route>
-            <Route path="/gallery">
+            <Route path="/gallery" riders={ridersJSON}>
               <Gallery />
             </Route>
-            <Route path="/rider">
+            <Route path="/rider" riders={ridersJSON}>
               <Rider />
             </Route>
             <Route path="/geo">
